@@ -5,7 +5,36 @@ body {
   width: 100%;
   height: 100vh;
 }
+/* general styles for section services,
+contact and footer */
 
+#services, #contact, footer {
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.section-container {
+  margin: 0 auto;
+  max-width: 940px;
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  padding: 120px 0 20px 0;
+}
+
+.section-slogan {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 100;
+  font-style: italic;
+  margin: 0;
+  padding: 0 0 80px 0;
+}
+/* ends of general styles */
 /* navs section */
 
 .navs {
@@ -342,8 +371,267 @@ article .about_box:last-of-type > .about_box_img{
   z-index: -1;
 
 }
+
+/* services section */
+
+#services {
+  background-color: #fff;
+}
+
+.services-columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+  flex: 0 1 auto;
+  margin: 0 0 120px 0;
+}
+
+.services-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 auto;
+  width: 28%;
+  margin: 0 35px 0 0;
+}
+
+.services-col:last-child {
+  margin-right: 0;
+}
+
+.services-icon {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0 0 33px 0;
+  border: 2px solid #fed136;
+  border-radius: 50%;
+}
+
+.services-icon img {
+  height: 36px;
+  margin: 17px 0;
+  padding: 0;
+}
+
+.services-icon:hover {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #222;
+}
+
+.services-col h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0 18px 0;
+}
+
+.services-col p {
+  padding: 0 5px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: 'Roboto Slab', serif;
+}
+/* ends of section services */
+/* contact section */
+
+#contact {
+  background-color: #222;
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  right: -15px;
+  top: 155px;
+  z-index: 2;
+  transform: scale(0.95);
+  padding: 0;
+  margin: 0;
+}
+
+
+#contact .section-title, #contact .section-slogan {
+  color: #fff;
+}
+
+.form-container {
+  margin: 0;
+}
+
+.form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+ .form-column, .form-container textarea  {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.form-container textarea, .form-column input {
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  margin: 10px;
+  border: 1px solid #fff;
+}
+
+.form-column input {
+  height: 48px;
+}
+
+.form-container textarea::placeholder, .form-column input::placeholder {
+  color: rgba(34, 34, 34, 0.4);
+  padding: 0 0 0 15px;
+}
+
+.form-container textarea::placeholder {
+  padding-top: 10px;
+}
+
+.form-container button {
+  width: 240px;
+  height: 60px;
+  background-color: #fed136;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 3px;
+  border: 1px solid #fed136;
+  margin: 30px 0 120px 0;
+}
+
+.form-container button:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fed136;
+  background-color: #222;
+}
+
+/* ends of contact section */
+/* footer */
+
+footer {
+  background-color: #fff;
+}
+
+footer .section-container {
+  margin: 20px auto 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer p {
+  font-size: 14px;
+  font-weight: 400; 
+  padding: 15px 0 0 0;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 0 100px;
+}
+
+.media-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #222;
+  background-color: #222;
+  margin: 0 5px;
+}
+
+.media-item a {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.media-item a:hover {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fed136;
+}
+
+/* ends of footer */
+
+
+
 /*   MEDIA QUERIES   */
-  /*   MD   */
+        @media (max-width: 767px) {
+          .section-title {
+            padding-top: 40px;
+          }
+          .section-slogan {
+            padding-bottom: 40px;
+          }
+          .services-columns {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 30px 0;
+          }
+          .services-col {
+            margin: 20px 0;
+            width: 60%;
+          }
+          .services-icon:hover {
+            display: none;
+          }
+          .form-container form {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .form-column, .form-container textarea  {
+            width: 80%;
+          }
+          .form-container textarea, .form-column input {
+            margin: 10px 0;
+          }
+          .form-container button {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 50px;
+          }
+          .form-container button:hover {
+            display: none;
+          }
+          #map {
+            right: -15px;
+            top: 50px;
+            z-index: 2;
+          }
+          footer .section-container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .media-container {
+            margin: 20px 0;
+          }
+          .media-item a:hover{
+            display: none;
+          }
+        }
+
+  /*   MD  - abour us */ 
         @media (max-width: 1250px) {
             .about_us{
               padding: 0;
@@ -356,7 +644,7 @@ article .about_box:last-of-type > .about_box_img{
               content: none;
             }
         }
-  /*   SM   */       
+  /*   SM  - abour us */       
         @media (max-width: 600px) {
            .about_box{
               grid-template-columns: 1fr;
@@ -364,3 +652,4 @@ article .about_box:last-of-type > .about_box_img{
             .about_us_text{
               text-align: center;
             }
+
