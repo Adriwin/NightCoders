@@ -143,6 +143,12 @@ contact and footer */
 /* end of sponsors section */
 
 /* portfolio  section */
+#our-portfolio
+{
+  text-align: center;
+  align-content: center;
+  margin-left: 15%;
+}
 #our-portfolio header h1
 {
   font-weight: 700px;
@@ -161,7 +167,7 @@ contact and footer */
   padding: 20px;
   align-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr  1fr ;
+  grid-template-columns: 1fr  300px  1fr ;
   grid-template-rows: 150px 150px 150px;
   grid-row-gap: 65px;
   grid-template-areas:
@@ -190,6 +196,7 @@ contact and footer */
 {
   grid-area: item1;
   z-index: 2;
+
 }
 #our-portfolio .item1d 
 {
@@ -217,6 +224,7 @@ contact and footer */
 #our-portfolio .item4 
 {
   grid-area: item4;
+   z-index: 2;
 
 }
 #our-portfolio .item4d 
