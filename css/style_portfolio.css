@@ -1,14 +1,34 @@
+body
+{
+  font-family: 'Roboto', sans-serif;
+}
+.header h1
+{
+  font-weight: 700px;
+  text-align: justify;
+}
+.header p
+{
+  color: lightslategray;
+  font-style: italic;
+}
+
 .container
 {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 10fr 1fr;
-  grid-template-rows: 150px 150px 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px 150px;
   grid-template-areas:
-    "header     header    header"
+    "header header   header"
     "item1  item2   item3"
     "item1  item2   item3"
-    "footer     footer    footer"
+    "item1d item2d  item3d"
+    "item4  item5   item6"
+    "item4  item5   item6"
+    "item4d item5d  item6d"
+    "footer     footer    footer";
+    align-items: center;
+    justify-items: center;
 }
 .footer 
 {
@@ -29,4 +49,34 @@
 .item3 
 {
   grid-area: item3;
+}
+/*responsivity*/
+@media (max-width: 700px) 
+{
+  .container 
+  {
+    grid-template-areas:
+      "header  header   header"
+      "item1   item1    item1"
+      "item1   item1    item1"
+      "item1   item1    item1"
+      "item1d   item1d    item1d"
+      "item2   item2    item2"
+      "item2   item2    item2"
+      "item2   item2    item2"
+      "item2d   item2d    item2d"
+      "item3   item3    item3"
+      "item3   item3    item3"
+      "item3   item3    item3"
+      "item4   item4    item4"
+      "item4   item4    item4"
+      "item4   item4    item4"
+      "item5   item5    item5"
+      "item5   item5    item5"
+      "item5   item5    item5"
+      "item6   item6    item6"
+      "item6   item6    item6"
+      "item6   item6    item6"
+      "footer  footer   footer"
+  }
 }
