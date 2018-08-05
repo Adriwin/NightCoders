@@ -1,4 +1,32 @@
-body
+.container
 {
-    
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 150px 150px 100px;
+  grid-template-areas:
+    "header     header    header"
+    "item1  item2   item3"
+    "item1  item2   item3"
+    "footer     footer    footer"
+}
+.footer 
+{
+  grid-area: footer;
+}
+.header 
+{
+  grid-area: header;
+}
+.item1 
+{
+  grid-area: item1;
+}
+.item2 
+{
+  grid-area: item2;
+}
+.item3 
+{
+  grid-area: item3;
 }
