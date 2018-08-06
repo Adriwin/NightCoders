@@ -294,9 +294,10 @@ footer, {
 
 /* portfolio  section */
 #our-portfolio {
-  text-align: center;
-  align-content: center;
-  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
 }
 #our-portfolio header h1 {
   font-weight: 700px;
@@ -308,12 +309,13 @@ footer, {
 }
 
 #our-portfolio .container {
-  width: 100%;
+ 
   margin: 10px;
   padding: 20px;
-  align-content: center;
+  align-content: end;
+  justify-items: center;
   display: grid;
-  grid-template-columns: 1fr 300px 1fr;
+  grid-template-columns: 1fr 1fr 350px;
   grid-template-rows: 150px 150px 150px;
   grid-row-gap: 65px;
   grid-template-areas:
@@ -325,10 +327,7 @@ footer, {
     "item4  item5   item6"
     "item4d item5d  item6d"
     "footer     footer    footer";
-  justify-items: center;
-  align-items: center;
 
-  grid-auto-flow: dense;
 }
 #our-portfolio .footer {
   grid-area: footer;
@@ -378,7 +377,7 @@ footer, {
 /*responsivity*/
 @media (max-width: 1500px) {
   #our-portfolio .container {
-    margin-left: 100px;
+    margin-left: 10px;
     justify-items: center;
     align-content: center;
     grid-template-areas:
@@ -396,7 +395,7 @@ footer, {
 }
 @media (max-width: 900px) {
   #our-portfolio .container {
-    margin-left: 100px;
+    margin-left: 50px;
     justify-items: center;
     align-content: center;
     grid-template-areas:
