@@ -400,28 +400,28 @@ footer, {
   #our-portfolio .container {
     justify-items: center;
     align-content: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px;
     grid-template-areas:
-      "header header"
-      "item1  item1"
-      "item1  item1"
-      "item1d item1d"
-      "item2  item2"
-      "item2  item2"
-      "item2d item2d"
-      "item3  item3"
-      "item3  item3"
-      "item3d item3d"
-      "item4  item4"
-      "item4  item4"
-      "item4d item4d"
-      "item5  item5"
-      "item5  item5"
-      "item5d item5d"
-      "item6  item6"
-      "item6  item6"
-      "item6d item6d";
+      "header"
+      "item1"
+      "item1"
+      "item1d"
+      "item2"
+      "item2"
+      "item2d"
+      "item3"
+      "item3"
+      "item3d"
+      "item4"
+      "item4"
+      "item4d"
+      "item5"
+      "item5"
+      "item5d"
+      "item6"
+      "item6"
+      "item6d";
   }
 }
 /* end of portfolio section */
