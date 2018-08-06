@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+  
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--fonts-->
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--style-->
     <link href="css/style.css" rel="stylesheet">
@@ -16,9 +18,66 @@
     <title>NIGHT CODERS _ PROJECT</title>
     <!--fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab" rel="stylesheet">
+     <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+     <!--JS-->
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+<!-- Poczatek JS-->
+    <script>
+		
+		jQuery(function($)
+		{
+			$.scrollTo(0);
+			$('#link1').click(function() { $.scrollTo($('#body'), 600); });
+			$('#link2').click(function() { $.scrollTo($('#services'), 600); });
+			$('#link3').click(function() { $.scrollTo($('#our-portfolio'), 600); });
+			$('#link4').click(function() { $.scrollTo($('#o_nas'), 600); });
+			$('#link5').click(function() { $.scrollTo($('#contact'), 600); });	
+			$('.scroll').click(function() { $.scrollTo($('body'), 1100); });
+		}
+		);
+		$(window).scroll(function()
+		{
+			if($(this).scrollTop()>500) $('.scroll').fadeIn();
+			else $('.scroll').fadeOut();		
+		}
+		);
+	
+	
+    </script>
+     <!--Koniec JS-->
+    
 </head>
 
 <body>
+        <a href="#" class="scroll"><i class="fa fa-angle-double-up"></i></a>
+    <!--Welcome-->
+    <section class="welcomes">
+        <div id="welcome_container">
+
+                <div id="welcome">
+                    <div id="header">
+                        <div id="napis">Golden</div>
+                        <div id="help">
+                            <div class="przycisk"><a id="link1" href="#">home</a></div>
+                            <div class="przycisk"><a id="link2" href="#">services</a></div>
+                            <div class="przycisk"><a id="link3" href="#">portfolio</a></div>
+                            <div class="przycisk"><a id="link4" href="#">about</a></div>
+                            <div class="przycisk"><a id="link5" href="#">contact</a></div>
+                        </div>
+                 </div>
+                    <div class="box">
+                        <h2><i>Welcome To Our Studio!</i></h2>
+        
+                        <h1>it's nice to meet you</h1>
+        
+                        <div class="button"><a href="#" class="new">Tell me more</a></div>
+                    </div>
+        
+                </div>
+            </div>
+     </section>
     <!--SERVICES-->
     <section id="services">
         <div class="section-container">
@@ -50,6 +109,7 @@
         </div>
     </section>
     <!--ABOUT US-->
+    <div id="o_nas"></div>
     <section class="about_us">
         <header>
             <h2>ABOUT US</h2>
