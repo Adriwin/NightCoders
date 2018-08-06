@@ -381,6 +381,8 @@ footer, {
     margin-left: 10px;
     justify-items: center;
     align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px;
     grid-template-areas:
       "header header"
       "item1  item2"
@@ -396,9 +398,10 @@ footer, {
 }
 @media (max-width: 900px) {
   #our-portfolio .container {
-    margin-left: 50px;
     justify-items: center;
     align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px;
     grid-template-areas:
       "header header"
       "item1  item1"
