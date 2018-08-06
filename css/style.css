@@ -1,3 +1,8 @@
+:root
+{
+    --x: 18px;
+}
+
 html,
 body {
   margin: 0;
@@ -10,7 +15,8 @@ contact and footer */
 
 #services,
 #contact,
-footer {
+#welcomes,
+footer, {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -36,7 +42,145 @@ footer {
   margin: 0;
   padding: 0 0 80px 0;
 }
+.scroll
+{
+    font-size:50px;
+    text-decoration:none;
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    display:none;
+    z-index:10;
+}
 /* ends of general styles */
+/* welcome section */
+#welcome_container
+{
+    width:100uv;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    color:white;
+  
+}
+
+#welcome
+{
+    margin-top:5%;
+    width:80%;
+    height:500px;
+    background: linear-gradient(0deg, rgba(13, 13, 13,0.8), rgba(13, 13, 13,0.8)), url(../img/tlo.jpeg) repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap: wrap;
+    position:relative;
+}
+#welcome #header
+{
+    position:absolute;
+    top:6%;
+    left:0;
+    height:20%;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+#welcome .box
+{
+    height:50%;
+    width:100%;
+    text-align:center;
+}
+#welcome h1
+{
+    margin-top:3%;
+    text-transform: uppercase;
+    font-size:calc(2.9*var(--x));
+}
+#welcome h2
+{
+  margin-top:5%;
+  font-size:calc(1.6*var(--x));
+  font-weight: 300;
+}
+#welcome .button
+{
+    margin-top:3%;
+    width:20%;
+    height:20%;
+    margin-right:auto;
+    margin-left:auto;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:calc(1*var(--x));
+    background-color:#999123;
+}
+#welcome #napis
+{
+    margin-left:17%;
+    font-family: 'Great Vibes', cursive;
+    font-size:1rem;
+    color: #dacc0f;
+}
+#welcome #help
+{
+    margin-right:23%;
+    width:30%;
+    display:flex;
+}
+#welcome .przycisk
+{
+    font-size:calc(0.65*var(--x));
+    margin-left:20px;
+    width:calc(20%-20px);
+    text-transform:uppercase;
+}
+
+
+#welcome a:link
+{
+    color:white;
+    text-decoration:none;
+}
+#welcome a:visited
+{
+    color:white;
+    text-decoration:none;
+}
+#welcome a:hover
+{
+    color:red;
+    text-decoration:none;
+}
+#welcome .new:link
+{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+    color:white;
+    text-decoration:none;
+}
+#welcome .new:visited
+{
+    color:white;
+    text-decoration:none;
+}
+#welcome .new:hover
+{
+    color:white;
+    text-decoration:none;
+}
+#welcome .button:hover
+{
+    background-color:#888012;
+}
+
+/* end of welcome section */
 /* navs section */
 
 .navs {
@@ -617,6 +761,73 @@ footer p {
     display: none;
   }
 }
+
+/*welcome*/
+@media(max-width:1100px) {
+  :root {
+  --x:15px;
+  }
+}
+@media (max-width:850px) {
+  #welcome #help {
+  margin-right:40%;
+  }
+}
+@media (max-width:600px) {
+  :root {
+  --x:13px;
+  }
+  .scroll {
+  bottom:10px;
+  right:10px;
+  font-size:30px;
+  }
+  #welcome {
+  background: linear-gradient(0deg, rgba(13, 13, 13,0.8), rgba(13, 13, 13,0.8)), url(../img/tlo2.jpeg) no-repeat;
+  }
+  #welcome #header {
+  display:block;
+  height:30%;
+  }
+  #welcome #napis {
+  font-size:calc(1*var(--x));
+  }
+  #welcome #help {
+  width:100%;
+  display:block;
+  }
+  #welcome .przycisk {
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+  text-align:center;
+  font-size:calc(1*var(--x));
+  }
+  #welcome h2 {
+  margin-top:22%;
+  }
+  #welcome h1 {
+  margin-top:8%;
+  }
+  #welcome .button {
+  font-size:calc(0.9*var(--x));
+  width:40%;
+  margin-top:10%;
+  }
+}
+@media(max-width:400px) {               
+  #welcome h1 {
+  font-size:calc(2*var(--x));
+  }
+  #welcome .button {
+  font-size:calc(1*var(--x));
+  }
+}
+@media(min-width:1900px) {
+  #welcome {
+  background: linear-gradient(0deg, rgba(13, 13, 13,0.8), rgba(13, 13, 13,0.8)), url(../img/tlo3.jpeg) no-repeat;
+  }
+}               
 
 /*   MD  - abour us */
 @media (max-width: 1250px) {
